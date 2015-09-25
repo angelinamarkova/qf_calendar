@@ -8,9 +8,9 @@
 </head>
 <body>
 <header class="clearfix">
-    <a href="/calendar/8"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a href="/calendar/8"><span class="glyphicon glyphicon-menu-left"></span></a>
     <h1>September</h1>
-    <a href="/calendar/10"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    <a href="/calendar/10"><span class="glyphicon glyphicon-menu-right"></span></a>
 <nav id="pageNav">
     <ul class="clearfix">
             <li id="user-victor">
@@ -542,40 +542,48 @@
     
 
     <div class="clearfix">
-        <select id="theme-picker">
-            <option value="1" selected>Dark</option>
-            <option value="2" >Light</option>
-        </select>
+        <div class="styled-select theme">
+            <select id="theme-picker">
+                <option value="1" selected>Dark</option>
+                <option value="2" >Light</option>
+            </select>
+        </div>
         
         <form method="post" action="/calendar" >
-            <select name="user" required>
-                <option value="" disabled selected><img src="images/small_icon_Victor.png" alt="Form Picture">Select User</option>
-                <option value="1"><img src="images/small_icon_Victor.png">Victor</option>
-                <option value="2"><img src="images/small_icon_karamfil.png">Karamfil</option>
-                <option value="3"><img src="images/small_icon_Mehmed.png">Mehmed</option>
-                <option value="4"><img src="images/small_icon_ivaylo.png">Ivajlo</option>
-                <option value="5"><img src="images/small_icon_Angelina.png">Angelina</option>
-            </select>
+            <div class="styled-select user">
+                <select  name="user" required>
+                    <option  value="" disabled selected>Select User</option>
+                    <option value="1">Victor</option>
+                    <option value="2">Karamfil</option>
+                    <option value="3">Mehmed</option>
+                    <option value="4">Ivajlo</option>
+                    <option value="5"><img src="images/small_icon_Angelina.png">Angelina</option>
+                </select>
+            </div>
 
-            <select id="project" name="project" required>
-                <option value="" disabled selected>Select project<img</option>
-                <option value="2">test project</option>
-                <option value="3">asd</option>
-                <option value="4">Project</option>
-                <option value="5">Project</option>
-                <option value="6">Project</option>
-                <option value="7">asd</option>
-                <option value="8">asd</option>
-                <option value="9">123</option>
-                <option value="10">asd</option>
-                <option value="11">' DROP DATABASE dealmarket</option>
-                <option value="12">Robert'); DROP TABLE STUDENTS; --</option>
-                <option value="13">Robert'); DROP TABLE tasks; --</option>
-            </select>
+            <div class="styled-select project">
+                <select id="project" name="project" required>
+                    <option value="" disabled selected>Select project<img</option>
+                    <option value="2">test project</option>
+                    <option value="3">asd</option>
+                    <option value="4">Project</option>
+                    <option value="5">Project</option>
+                    <option value="6">Project</option>
+                    <option value="7">asd</option>
+                    <option value="8">asd</option>
+                    <option value="9">123</option>
+                    <option value="10">asd</option>
+                    <option value="11">' DROP DATABASE dealmarket</option>
+                    <option value="12">Robert'); DROP TABLE STUDENTS; --</option>
+                    <option value="13">Robert'); DROP TABLE tasks; --</option>
+                </select>
+            </div>
+            <div class="styled-select task">
+                <select id="task" name="task" required>
+                    <option value="" disabled selected>Select task</option>
+                </select>
+            </div>
 
-            <select id="task" name="task" required>
-                <option value="" disabled selected>Select task</option>
-            </select>
             <input type="number" name="hours" placeholder="Hours" required>
             <input type="text" id="datepicker" name="date" placeholder="Date" class="datepicker" required>
             <input type="submit">
